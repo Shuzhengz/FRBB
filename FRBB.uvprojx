@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>SYSTEM</TargetName>
+      <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
@@ -111,12 +111,12 @@
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
           <SimDllArguments> -REMAP</SimDllArguments>
-          <SimDlgDll>DCM.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
+          <SimDlgDll>DARMSTM.DLL</SimDlgDll>
+          <SimDlgDllArguments>-pSTM32F103ZE</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments></TargetDllArguments>
-          <TargetDlgDll>TCM.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
+          <TargetDlgDll>TARMSTM.DLL</TargetDlgDll>
+          <TargetDlgDllArguments>pSTM32F103ZE</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -259,17 +259,17 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
@@ -279,7 +279,7 @@
                 <Size>0x80000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -381,7 +381,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>sys</GroupName>
+          <GroupName>SYSTEM</GroupName>
           <Files>
             <File>
               <FileName>sys.c</FileName>
@@ -398,11 +398,11 @@
               <FileType>5</FileType>
               <FilePath>.\SYSTEM\sys\stm32f10x.h</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>delay</GroupName>
-          <Files>
+            <File>
+              <FileName>core_cm3.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SYSTEM\sys\core_cm3.h</FilePath>
+            </File>
             <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
@@ -413,11 +413,6 @@
               <FileType>5</FileType>
               <FilePath>.\SYSTEM\delay\delay.h</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>usart</GroupName>
-          <Files>
             <File>
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
@@ -427,6 +422,21 @@
               <FileName>usart.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\SYSTEM\usart\usart.h</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f10x.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SYSTEM\sys\system_stm32f10x.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>USER</GroupName>
+          <Files>
+            <File>
+              <FileName>test.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\USER\test.cpp</FilePath>
             </File>
           </Files>
         </Group>
