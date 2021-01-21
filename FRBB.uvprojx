@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\SYSTEM\delay;.\SYSTEM\sys;.\SYSTEM\usart;.\USER</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
