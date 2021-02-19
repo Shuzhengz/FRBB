@@ -1,0 +1,9 @@
+# VS Code Setting Folder
+.vs/
+
+# MDK5 Folders
+Listings/
+DebugConfig/
+
+# Specific Files
+FRBB.uvguix.treez
