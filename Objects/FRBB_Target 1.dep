@@ -9,7 +9,7 @@ I (SYSTEM\sys\system_stm32f10x.h)(0x4F1F0F3C)
 F (.\SYSTEM\sys\sys.h)(0x6002A0E4)()
 F (.\SYSTEM\sys\stm32f10x.h)(0x4F1F0F3C)()
 F (.\SYSTEM\sys\core_cm3.h)(0x4D531C58)()
-F (.\SYSTEM\delay\delay.c)(0x603032C0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./SYSTEM/delay -I ./SYSTEM/sys -I ./SYSTEM/usart -I ./USER-I./RTE/_Target_1-IC:/Users/treez/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="530" -DSTM32F10X_HD -D_RTE_-o ./objects/delay.o -MD)
+F (.\SYSTEM\delay\delay.c)(0x603034FD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./SYSTEM/delay -I ./SYSTEM/sys -I ./SYSTEM/usart -I ./USER-I./RTE/_Target_1-IC:/Users/treez/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="530" -DSTM32F10X_HD -D_RTE_-o ./objects/delay.o -MD)
 I (SYSTEM\delay\delay.h)(0x6002A246)
 I (SYSTEM\sys\sys.h)(0x6002A0E4)
 I (SYSTEM\sys\stm32f10x.h)(0x4F1F0F3C)
@@ -27,7 +27,7 @@ I (SYSTEM\sys\system_stm32f10x.h)(0x4F1F0F3C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5DE0D062)
 F (.\SYSTEM\usart\usart.h)(0x6005F0C3)()
 F (.\SYSTEM\sys\system_stm32f10x.h)(0x4F1F0F3C)()
-F (.\USER\test.cpp)(0x6008F0BD)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./SYSTEM/delay -I ./SYSTEM/sys -I ./SYSTEM/usart -I ./USER-I./RTE/_Target_1-IC:/Users/treez/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="530" -DSTM32F10X_HD -D_RTE_-o ./objects/test.o -MD)
+F (.\USER\test.cpp)(0x603035A2)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./SYSTEM/delay -I ./SYSTEM/sys -I ./SYSTEM/usart -I ./USER-I./RTE/_Target_1-IC:/Users/treez/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="530" -DSTM32F10X_HD -D_RTE_-o ./objects/test.o -MD)
 I (SYSTEM\sys\sys.h)(0x6002A0E4)
 I (SYSTEM\sys\stm32f10x.h)(0x4F1F0F3C)
 I (SYSTEM\sys\core_cm3.h)(0x4D531C58)
@@ -39,3 +39,13 @@ I (SYSTEM\usart\usart.h)(0x6005F0C3)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdio.h)(0x5E0C85A8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5DE0D062)
 I (SYSTEM\delay\delay.h)(0x6002A246)
+F (.\HARDWARE\beep.cpp)(0x60303408)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./SYSTEM/delay -I ./SYSTEM/sys -I ./SYSTEM/usart -I ./USER-I./RTE/_Target_1-IC:/Users/treez/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="530" -DSTM32F10X_HD -D_RTE_-o ./objects/beep.o -MD)
+I (HARDWARE\beep.h)(0x60303478)
+I (SYSTEM\sys\sys.h)(0x6002A0E4)
+I (SYSTEM\sys\stm32f10x.h)(0x4F1F0F3C)
+I (SYSTEM\sys\core_cm3.h)(0x4D531C58)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x5E0C85A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x5E3409C2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE0D062)
+I (SYSTEM\sys\system_stm32f10x.h)(0x4F1F0F3C)
+F (.\HARDWARE\beep.h)(0x60303478)()

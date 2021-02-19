@@ -440,6 +440,21 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>HARDWARE</GroupName>
+          <Files>
+            <File>
+              <FileName>beep.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\HARDWARE\beep.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>beep.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HARDWARE\beep.h</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>
