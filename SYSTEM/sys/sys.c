@@ -47,9 +47,9 @@ void MYRCC_DeInit(void)
  	RCC->APB1RSTR = 0x00000000;
 	RCC->APB2RSTR = 0x00000000; 
 	  
-  	RCC->AHBENR = 0x00000014;
-  	RCC->APB2ENR = 0x00000000;	   
-  	RCC->APB1ENR = 0x00000000;   
+  RCC->AHBENR = 0x00000014;
+  RCC->APB2ENR = 0x00000000;	   
+  RCC->APB1ENR = 0x00000000;   
 	RCC->CR |= 0x00000001;														 
 	RCC->CFGR &= 0xF8FF0000;					 
 	RCC->CR &= 0xFEF6FFFF;
@@ -79,7 +79,7 @@ void INTX_ENABLE(void)
 	__ASM volatile("cpsie i");		  
 }
 
-__asm void MSR_MSP(u32 addr) 
+__asm void MSR_MSP(u32 addr)
 {
     MSR MSP, r0
     BX r14

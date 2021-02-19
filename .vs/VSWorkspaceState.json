@@ -3,8 +3,9 @@
     "",
     "\\SYSTEM",
     "\\SYSTEM\\sys",
-    "\\SYSTEM\\usart"
+    "\\SYSTEM\\usart",
+    "\\USER"
   ],
-  "SelectedNode": "\\SYSTEM\\sys\\sys.c",
+  "SelectedNode": "\\USER\\test.cpp",
   "PreviewInSolutionExplorer": false
 }

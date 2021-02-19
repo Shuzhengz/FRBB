@@ -1,8 +1,0 @@
--xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c
--fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions
--D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./SYSTEM/delay -I ./SYSTEM/sys -I ./SYSTEM/usart -I ./USER
--I./RTE/_Target_1
--IC:/Users/treez/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include
--IC:/Keil_v5/ARM/CMSIS/Include
--D__UVISION_VERSION="530" -DSTM32F10X_HD -D_RTE_
--o ./objects/test.o -MD "USER/test.cpp"

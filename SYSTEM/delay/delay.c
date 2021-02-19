@@ -85,7 +85,7 @@ void delay_init(u8 SYSCLK)
 #endif
 }								    
 
-#if SYSTEM_SUPPORT_OS    								   
+#if SYSTEM_SUPPORT_OS
 void delay_us(u32 nus)
 {		
 	u32 ticks;
