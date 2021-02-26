@@ -102,283 +102,6 @@ SYSTEM/sys/sys.c(135): warning: implicit conversion loses integer precision: 'ui
                     ~~~~~~~~~~^~~
 8 warnings and 3 errors generated.
 compiling sys.c...
-SYSTEM/usart/usart.c(1): warning: In file included from...
-./SYSTEM/usart/usart.h(3): warning: In file included from...
-./SYSTEM/sys\sys.h(4): warning: In file included from...
-./SYSTEM/sys\stm32f10x.h(478): warning: In file included from...
-./SYSTEM/sys/core_cm3.h(1720): warning: function 'NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-{
-^
-SYSTEM/usart/usart.c(3): error: expected value in expression
-#if SYSTEM_SUPPORT_OS
-                     ^
-SYSTEM/usart/usart.c(7): error: '#pragma import' is an ARM Compiler 5 extension, and is not supported by ARM Compiler 6 [-Warmcc-pragma-import]
-#pragma import(__use_no_semihosting)             
-        ^
-SYSTEM/usart/usart.c(9): error: redefinition of '__FILE'
-struct __FILE 
-       ^
-C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(119): note: previous definition is here
-struct __FILE {
-       ^
-SYSTEM/usart/usart.c(19): warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
-_sys_exit(int x) 
-^
-SYSTEM/usart/usart.c(21): warning: explicitly assigning value of variable of type 'int' to itself [-Wself-assign]
-        x = x; 
-        ~ ^ ~
-SYSTEM/usart/usart.c(19): warning: no previous prototype for function '_sys_exit' [-Wmissing-prototypes]
-_sys_exit(int x) 
-^
-SYSTEM/usart/usart.c(19): note: declare 'static' if the function is not intended to be used outside of this translation unit
-_sys_exit(int x) 
-         ^
-         static 
-SYSTEM/usart/usart.c(24): warning: unused parameter 'f' [-Wunused-parameter]
-int fputc(int ch, FILE *f)
-                        ^
-SYSTEM/usart/usart.c(41): error: expected value in expression
-#if SYSTEM_SUPPORT_OS
-                     ^
-SYSTEM/usart/usart.c(47): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
-                res=USART1->DR; 
-                   ~~~~~~~~~^~
-SYSTEM/usart/usart.c(67): error: expected value in expression
-#if SYSTEM_SUPPORT_OS
-                     ^
-SYSTEM/usart/usart.c(37): warning: no previous prototype for function 'USART1_IRQHandler' [-Wmissing-prototypes]
-void USART1_IRQHandler(void)
-     ^
-SYSTEM/usart/usart.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void USART1_IRQHandler(void)
-^
-static 
-SYSTEM/usart/usart.c(79): warning: implicit conversion from 'unsigned int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
-        temp=(float)(pclk2*1000000)/(bound*16);
-                                   ~ ~~~~~^~~
-SYSTEM/usart/usart.c(80): warning: implicit conversion turns floating-point number into integer: 'float' to 'u16' (aka 'unsigned short') [-Wfloat-conversion]
-        mantissa=temp;
-                ~^~~~
-SYSTEM/usart/usart.c(81): warning: implicit conversion turns floating-point number into integer: 'float' to 'u16' (aka 'unsigned short') [-Wfloat-conversion]
-        fraction=(temp-mantissa)*16; 
-                ~~~~~~~~~~~~~~~~^~~
-SYSTEM/usart/usart.c(89): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        RCC->APB2RSTR&=~(1<<14);
-                     ~~^~~~~~~~
-11 warnings and 5 errors generated.
-compiling usart.c...
-USER/test.cpp(1): warning: In file included from...
-./SYSTEM/sys\sys.h(4): warning: In file included from...
-./SYSTEM/sys\stm32f10x.h(478): warning: In file included from...
-./SYSTEM/sys/core_cm3.h(1473): warning: use of old-style cast [-Wold-style-cast]
-  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
-                ^~~
-./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
-#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1478): warning: use of old-style cast [-Wold-style-cast]
-  SCB->AIRCR =  reg_value;
-  ^~~
-./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
-#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1491): warning: use of old-style cast [-Wold-style-cast]
-  return ((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos);   /* read priority grouping field */
-           ^~~
-./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
-#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1504): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
-  ^~~~
-./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
-#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
-                             ^                      ~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1504): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
-              ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1504): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
-                                               ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1517): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ICER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* disable interrupt */
-  ^~~~
-./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
-#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
-                             ^                      ~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1517): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ICER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* disable interrupt */
-              ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1517): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ICER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* disable interrupt */
-                                               ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1531): warning: use of old-style cast [-Wold-style-cast]
-  return((uint32_t) ((NVIC->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if pending else 0 */
-                      ^~~~
-./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
-#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
-                             ^                      ~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1531): warning: use of old-style cast [-Wold-style-cast]
-  return((uint32_t) ((NVIC->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if pending else 0 */
-                                 ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1531): warning: use of old-style cast [-Wold-style-cast]
-  return((uint32_t) ((NVIC->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if pending else 0 */
-                                                                 ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1531): warning: use of old-style cast [-Wold-style-cast]
-  return((uint32_t) ((NVIC->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if pending else 0 */
-         ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1544): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ISPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* set interrupt pending */
-  ^~~~
-./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
-#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
-                             ^                      ~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1544): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ISPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* set interrupt pending */
-              ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1544): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ISPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* set interrupt pending */
-                                               ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1557): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
-  ^~~~
-./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
-#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
-                             ^                      ~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1557): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
-              ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1557): warning: use of old-style cast [-Wold-style-cast]
-  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
-                                               ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1571): warning: use of old-style cast [-Wold-style-cast]
-  return((uint32_t)((NVIC->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if active else 0 */
-                     ^~~~
-./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
-#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
-                             ^                      ~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1571): warning: use of old-style cast [-Wold-style-cast]
-  return((uint32_t)((NVIC->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if active else 0 */
-                                ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1571): warning: use of old-style cast [-Wold-style-cast]
-  return((uint32_t)((NVIC->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if active else 0 */
-                                                                ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1571): warning: use of old-style cast [-Wold-style-cast]
-  return((uint32_t)((NVIC->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if active else 0 */
-         ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1589): warning: use of old-style cast [-Wold-style-cast]
-    SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff); } /* set Priority for Cortex-M3 System Interrupts */
-    ^~~
-./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
-#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1589): warning: use of old-style cast [-Wold-style-cast]
-    SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff); } /* set Priority for Cortex-M3 System Interrupts */
-              ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1591): warning: use of old-style cast [-Wold-style-cast]
-    NVIC->IP[(uint32_t)(IRQn)] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff);    }        /* set Priority for device specific Interrupts  */
-    ^~~~
-./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
-#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
-                             ^                      ~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1591): warning: use of old-style cast [-Wold-style-cast]
-    NVIC->IP[(uint32_t)(IRQn)] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff);    }        /* set Priority for device specific Interrupts  */
-             ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1613): warning: use of old-style cast [-Wold-style-cast]
-    return((uint32_t)(SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for Cortex-M3 system interrupts */
-                      ^~~
-./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
-#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1613): warning: use of old-style cast [-Wold-style-cast]
-    return((uint32_t)(SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for Cortex-M3 system interrupts */
-                                ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1613): warning: use of old-style cast [-Wold-style-cast]
-    return((uint32_t)(SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for Cortex-M3 system interrupts */
-           ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1615): warning: use of old-style cast [-Wold-style-cast]
-    return((uint32_t)(NVIC->IP[(uint32_t)(IRQn)]           >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for device specific interrupts  */
-                      ^~~~
-./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
-#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
-                             ^                      ~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1615): warning: use of old-style cast [-Wold-style-cast]
-    return((uint32_t)(NVIC->IP[(uint32_t)(IRQn)]           >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for device specific interrupts  */
-                               ^         ~~~~~~
-./SYSTEM/sys/core_cm3.h(1615): warning: use of old-style cast [-Wold-style-cast]
-    return((uint32_t)(NVIC->IP[(uint32_t)(IRQn)]           >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for device specific interrupts  */
-           ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1698): warning: use of old-style cast [-Wold-style-cast]
-  SysTick->LOAD  = (ticks & SysTick_LOAD_RELOAD_Msk) - 1;      /* set reload register */
-  ^~~~~~~
-./SYSTEM/sys/core_cm3.h(724): note: expanded from macro 'SysTick'
-#define SysTick             ((SysTick_Type *)       SysTick_BASE)     /*!< SysTick configuration struct      */
-                             ^                      ~~~~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1700): warning: use of old-style cast [-Wold-style-cast]
-  SysTick->VAL   = 0;                                          /* Load the SysTick Counter Value */
-  ^~~~~~~
-./SYSTEM/sys/core_cm3.h(724): note: expanded from macro 'SysTick'
-#define SysTick             ((SysTick_Type *)       SysTick_BASE)     /*!< SysTick configuration struct      */
-                             ^                      ~~~~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1701): warning: use of old-style cast [-Wold-style-cast]
-  SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk | 
-  ^~~~~~~
-./SYSTEM/sys/core_cm3.h(724): note: expanded from macro 'SysTick'
-#define SysTick             ((SysTick_Type *)       SysTick_BASE)     /*!< SysTick configuration struct      */
-                             ^                      ~~~~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1721): warning: use of old-style cast [-Wold-style-cast]
-  SCB->AIRCR  = ((0x5FA << SCB_AIRCR_VECTKEY_Pos)      | 
-  ^~~
-./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
-#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1722): warning: use of old-style cast [-Wold-style-cast]
-                 (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) | 
-                  ^~~
-./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
-#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1720): warning: function 'NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-{
-^
-./SYSTEM/sys/core_cm3.h(1758): warning: use of old-style cast [-Wold-style-cast]
-  if ((CoreDebug->DEMCR & CoreDebug_DEMCR_TRCENA_Msk)  &&      /* Trace enabled */
-       ^~~~~~~~~
-./SYSTEM/sys/core_cm3.h(727): note: expanded from macro 'CoreDebug'
-#define CoreDebug           ((CoreDebug_Type *)     CoreDebug_BASE)   /*!< Core Debug configuration struct   */
-                             ^                      ~~~~~~~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1759): warning: use of old-style cast [-Wold-style-cast]
-      (ITM->TCR & ITM_TCR_ITMENA_Msk)                  &&      /* ITM enabled */
-       ^~~
-./SYSTEM/sys/core_cm3.h(726): note: expanded from macro 'ITM'
-#define ITM                 ((ITM_Type *)           ITM_BASE)         /*!< ITM configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1760): warning: use of old-style cast [-Wold-style-cast]
-      (ITM->TER & (1ul << 0)        )                    )     /* ITM Port #0 enabled */
-       ^~~
-./SYSTEM/sys/core_cm3.h(726): note: expanded from macro 'ITM'
-#define ITM                 ((ITM_Type *)           ITM_BASE)         /*!< ITM configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1762): warning: use of old-style cast [-Wold-style-cast]
-    while (ITM->PORT[0].u32 == 0);
-           ^~~
-./SYSTEM/sys/core_cm3.h(726): note: expanded from macro 'ITM'
-#define ITM                 ((ITM_Type *)           ITM_BASE)         /*!< ITM configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1763): warning: use of old-style cast [-Wold-style-cast]
-    ITM->PORT[0].u8 = (uint8_t) ch;
-    ^~~
-./SYSTEM/sys/core_cm3.h(726): note: expanded from macro 'ITM'
-#define ITM                 ((ITM_Type *)           ITM_BASE)         /*!< ITM configuration struct          */
-                             ^                      ~~~~~~~~
-./SYSTEM/sys/core_cm3.h(1763): warning: use of old-style cast [-Wold-style-cast]
-    ITM->PORT[0].u8 = (uint8_t) ch;
-                      ^         ~~
-USER/test.cpp(4): error: 'beep.h' file not found
-#include "beep.h" 
-         ^~~~~~~~
-45 warnings and 1 error generated.
-compiling test.cpp...
 HARDWARE/beep.cpp(1): warning: In file included from...
 HARDWARE/beep.h(3): warning: In file included from...
 ./SYSTEM/sys\sys.h(4): warning: In file included from...
@@ -711,6 +434,283 @@ HARDWARE/beep.h(5): note: expanded from macro 'BEEP'
                           ^                          ~~~~~~
 54 warnings generated.
 compiling beep.cpp...
+SYSTEM/usart/usart.c(1): warning: In file included from...
+./SYSTEM/usart/usart.h(3): warning: In file included from...
+./SYSTEM/sys\sys.h(4): warning: In file included from...
+./SYSTEM/sys\stm32f10x.h(478): warning: In file included from...
+./SYSTEM/sys/core_cm3.h(1720): warning: function 'NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+SYSTEM/usart/usart.c(3): error: expected value in expression
+#if SYSTEM_SUPPORT_OS
+                     ^
+SYSTEM/usart/usart.c(7): error: '#pragma import' is an ARM Compiler 5 extension, and is not supported by ARM Compiler 6 [-Warmcc-pragma-import]
+#pragma import(__use_no_semihosting)             
+        ^
+SYSTEM/usart/usart.c(9): error: redefinition of '__FILE'
+struct __FILE 
+       ^
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(119): note: previous definition is here
+struct __FILE {
+       ^
+SYSTEM/usart/usart.c(19): warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+_sys_exit(int x) 
+^
+SYSTEM/usart/usart.c(21): warning: explicitly assigning value of variable of type 'int' to itself [-Wself-assign]
+        x = x; 
+        ~ ^ ~
+SYSTEM/usart/usart.c(19): warning: no previous prototype for function '_sys_exit' [-Wmissing-prototypes]
+_sys_exit(int x) 
+^
+SYSTEM/usart/usart.c(19): note: declare 'static' if the function is not intended to be used outside of this translation unit
+_sys_exit(int x) 
+         ^
+         static 
+SYSTEM/usart/usart.c(24): warning: unused parameter 'f' [-Wunused-parameter]
+int fputc(int ch, FILE *f)
+                        ^
+SYSTEM/usart/usart.c(41): error: expected value in expression
+#if SYSTEM_SUPPORT_OS
+                     ^
+SYSTEM/usart/usart.c(47): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                res=USART1->DR; 
+                   ~~~~~~~~~^~
+SYSTEM/usart/usart.c(67): error: expected value in expression
+#if SYSTEM_SUPPORT_OS
+                     ^
+SYSTEM/usart/usart.c(37): warning: no previous prototype for function 'USART1_IRQHandler' [-Wmissing-prototypes]
+void USART1_IRQHandler(void)
+     ^
+SYSTEM/usart/usart.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART1_IRQHandler(void)
+^
+static 
+SYSTEM/usart/usart.c(79): warning: implicit conversion from 'unsigned int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+        temp=(float)(pclk2*1000000)/(bound*16);
+                                   ~ ~~~~~^~~
+SYSTEM/usart/usart.c(80): warning: implicit conversion turns floating-point number into integer: 'float' to 'u16' (aka 'unsigned short') [-Wfloat-conversion]
+        mantissa=temp;
+                ~^~~~
+SYSTEM/usart/usart.c(81): warning: implicit conversion turns floating-point number into integer: 'float' to 'u16' (aka 'unsigned short') [-Wfloat-conversion]
+        fraction=(temp-mantissa)*16; 
+                ~~~~~~~~~~~~~~~~^~~
+SYSTEM/usart/usart.c(89): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        RCC->APB2RSTR&=~(1<<14);
+                     ~~^~~~~~~~
+11 warnings and 5 errors generated.
+compiling usart.c...
+USER/test.cpp(1): warning: In file included from...
+./SYSTEM/sys\sys.h(4): warning: In file included from...
+./SYSTEM/sys\stm32f10x.h(478): warning: In file included from...
+./SYSTEM/sys/core_cm3.h(1473): warning: use of old-style cast [-Wold-style-cast]
+  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+                ^~~
+./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
+#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1478): warning: use of old-style cast [-Wold-style-cast]
+  SCB->AIRCR =  reg_value;
+  ^~~
+./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
+#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1491): warning: use of old-style cast [-Wold-style-cast]
+  return ((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos);   /* read priority grouping field */
+           ^~~
+./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
+#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1504): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
+  ^~~~
+./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
+#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
+                             ^                      ~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1504): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
+              ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1504): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
+                                               ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1517): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ICER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* disable interrupt */
+  ^~~~
+./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
+#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
+                             ^                      ~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1517): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ICER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* disable interrupt */
+              ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1517): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ICER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* disable interrupt */
+                                               ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1531): warning: use of old-style cast [-Wold-style-cast]
+  return((uint32_t) ((NVIC->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if pending else 0 */
+                      ^~~~
+./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
+#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
+                             ^                      ~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1531): warning: use of old-style cast [-Wold-style-cast]
+  return((uint32_t) ((NVIC->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if pending else 0 */
+                                 ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1531): warning: use of old-style cast [-Wold-style-cast]
+  return((uint32_t) ((NVIC->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if pending else 0 */
+                                                                 ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1531): warning: use of old-style cast [-Wold-style-cast]
+  return((uint32_t) ((NVIC->ISPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if pending else 0 */
+         ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1544): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ISPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* set interrupt pending */
+  ^~~~
+./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
+#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
+                             ^                      ~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1544): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ISPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* set interrupt pending */
+              ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1544): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ISPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* set interrupt pending */
+                                               ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1557): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
+  ^~~~
+./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
+#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
+                             ^                      ~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1557): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
+              ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1557): warning: use of old-style cast [-Wold-style-cast]
+  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
+                                               ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1571): warning: use of old-style cast [-Wold-style-cast]
+  return((uint32_t)((NVIC->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if active else 0 */
+                     ^~~~
+./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
+#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
+                             ^                      ~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1571): warning: use of old-style cast [-Wold-style-cast]
+  return((uint32_t)((NVIC->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if active else 0 */
+                                ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1571): warning: use of old-style cast [-Wold-style-cast]
+  return((uint32_t)((NVIC->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if active else 0 */
+                                                                ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1571): warning: use of old-style cast [-Wold-style-cast]
+  return((uint32_t)((NVIC->IABR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0)); /* Return 1 if active else 0 */
+         ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1589): warning: use of old-style cast [-Wold-style-cast]
+    SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff); } /* set Priority for Cortex-M3 System Interrupts */
+    ^~~
+./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
+#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1589): warning: use of old-style cast [-Wold-style-cast]
+    SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff); } /* set Priority for Cortex-M3 System Interrupts */
+              ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1591): warning: use of old-style cast [-Wold-style-cast]
+    NVIC->IP[(uint32_t)(IRQn)] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff);    }        /* set Priority for device specific Interrupts  */
+    ^~~~
+./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
+#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
+                             ^                      ~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1591): warning: use of old-style cast [-Wold-style-cast]
+    NVIC->IP[(uint32_t)(IRQn)] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff);    }        /* set Priority for device specific Interrupts  */
+             ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1613): warning: use of old-style cast [-Wold-style-cast]
+    return((uint32_t)(SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for Cortex-M3 system interrupts */
+                      ^~~
+./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
+#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1613): warning: use of old-style cast [-Wold-style-cast]
+    return((uint32_t)(SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for Cortex-M3 system interrupts */
+                                ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1613): warning: use of old-style cast [-Wold-style-cast]
+    return((uint32_t)(SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for Cortex-M3 system interrupts */
+           ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1615): warning: use of old-style cast [-Wold-style-cast]
+    return((uint32_t)(NVIC->IP[(uint32_t)(IRQn)]           >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for device specific interrupts  */
+                      ^~~~
+./SYSTEM/sys/core_cm3.h(725): note: expanded from macro 'NVIC'
+#define NVIC                ((NVIC_Type *)          NVIC_BASE)        /*!< NVIC configuration struct         */
+                             ^                      ~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1615): warning: use of old-style cast [-Wold-style-cast]
+    return((uint32_t)(NVIC->IP[(uint32_t)(IRQn)]           >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for device specific interrupts  */
+                               ^         ~~~~~~
+./SYSTEM/sys/core_cm3.h(1615): warning: use of old-style cast [-Wold-style-cast]
+    return((uint32_t)(NVIC->IP[(uint32_t)(IRQn)]           >> (8 - __NVIC_PRIO_BITS)));  } /* get priority for device specific interrupts  */
+           ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1698): warning: use of old-style cast [-Wold-style-cast]
+  SysTick->LOAD  = (ticks & SysTick_LOAD_RELOAD_Msk) - 1;      /* set reload register */
+  ^~~~~~~
+./SYSTEM/sys/core_cm3.h(724): note: expanded from macro 'SysTick'
+#define SysTick             ((SysTick_Type *)       SysTick_BASE)     /*!< SysTick configuration struct      */
+                             ^                      ~~~~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1700): warning: use of old-style cast [-Wold-style-cast]
+  SysTick->VAL   = 0;                                          /* Load the SysTick Counter Value */
+  ^~~~~~~
+./SYSTEM/sys/core_cm3.h(724): note: expanded from macro 'SysTick'
+#define SysTick             ((SysTick_Type *)       SysTick_BASE)     /*!< SysTick configuration struct      */
+                             ^                      ~~~~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1701): warning: use of old-style cast [-Wold-style-cast]
+  SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk | 
+  ^~~~~~~
+./SYSTEM/sys/core_cm3.h(724): note: expanded from macro 'SysTick'
+#define SysTick             ((SysTick_Type *)       SysTick_BASE)     /*!< SysTick configuration struct      */
+                             ^                      ~~~~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1721): warning: use of old-style cast [-Wold-style-cast]
+  SCB->AIRCR  = ((0x5FA << SCB_AIRCR_VECTKEY_Pos)      | 
+  ^~~
+./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
+#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1722): warning: use of old-style cast [-Wold-style-cast]
+                 (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) | 
+                  ^~~
+./SYSTEM/sys/core_cm3.h(723): note: expanded from macro 'SCB'
+#define SCB                 ((SCB_Type *)           SCB_BASE)         /*!< SCB configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1720): warning: function 'NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+./SYSTEM/sys/core_cm3.h(1758): warning: use of old-style cast [-Wold-style-cast]
+  if ((CoreDebug->DEMCR & CoreDebug_DEMCR_TRCENA_Msk)  &&      /* Trace enabled */
+       ^~~~~~~~~
+./SYSTEM/sys/core_cm3.h(727): note: expanded from macro 'CoreDebug'
+#define CoreDebug           ((CoreDebug_Type *)     CoreDebug_BASE)   /*!< Core Debug configuration struct   */
+                             ^                      ~~~~~~~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1759): warning: use of old-style cast [-Wold-style-cast]
+      (ITM->TCR & ITM_TCR_ITMENA_Msk)                  &&      /* ITM enabled */
+       ^~~
+./SYSTEM/sys/core_cm3.h(726): note: expanded from macro 'ITM'
+#define ITM                 ((ITM_Type *)           ITM_BASE)         /*!< ITM configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1760): warning: use of old-style cast [-Wold-style-cast]
+      (ITM->TER & (1ul << 0)        )                    )     /* ITM Port #0 enabled */
+       ^~~
+./SYSTEM/sys/core_cm3.h(726): note: expanded from macro 'ITM'
+#define ITM                 ((ITM_Type *)           ITM_BASE)         /*!< ITM configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1762): warning: use of old-style cast [-Wold-style-cast]
+    while (ITM->PORT[0].u32 == 0);
+           ^~~
+./SYSTEM/sys/core_cm3.h(726): note: expanded from macro 'ITM'
+#define ITM                 ((ITM_Type *)           ITM_BASE)         /*!< ITM configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1763): warning: use of old-style cast [-Wold-style-cast]
+    ITM->PORT[0].u8 = (uint8_t) ch;
+    ^~~
+./SYSTEM/sys/core_cm3.h(726): note: expanded from macro 'ITM'
+#define ITM                 ((ITM_Type *)           ITM_BASE)         /*!< ITM configuration struct          */
+                             ^                      ~~~~~~~~
+./SYSTEM/sys/core_cm3.h(1763): warning: use of old-style cast [-Wold-style-cast]
+    ITM->PORT[0].u8 = (uint8_t) ch;
+                      ^         ~~
+USER/test.cpp(4): error: 'beep.h' file not found
+#include "beep.h" 
+         ^~~~~~~~
+45 warnings and 1 error generated.
+compiling test.cpp...
 ".\Objects\FRBB.axf" - 15 Error(s), 120 Warning(s).
 
 <h2>Software Packages used:</h2>

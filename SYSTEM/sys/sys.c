@@ -47,9 +47,9 @@ void MYRCC_DeInit(void)
  	RCC->APB1RSTR = 0x00000000;
 	RCC->APB2RSTR = 0x00000000; 
 	  
-  RCC->AHBENR = 0x00000014;
-  RCC->APB2ENR = 0x00000000;	   
-  RCC->APB1ENR = 0x00000000;   
+  	RCC->AHBENR = 0x00000014;
+  	RCC->APB2ENR = 0x00000000;	   
+  	RCC->APB1ENR = 0x00000000;   
 	RCC->CR |= 0x00000001;														 
 	RCC->CFGR &= 0xF8FF0000;					 
 	RCC->CR &= 0xFEF6FFFF;
@@ -136,14 +136,3 @@ void Stm32_Clock_Init(u8 PLL)
 		temp&=0x03;
 	}    
 }		    
-
-
-
-
-
-
-
-
-
-
-
