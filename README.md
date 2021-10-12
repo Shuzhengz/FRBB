@@ -1,5 +1,5 @@
-# FRBB
-Free RTOS But Better (Not really)
+# AW STM32 Test
 
-OS for STM32F103ZETT6 MCU
+Test for STM32F103ZETT6 MCU development board
 
+Alientek Warship V3 W T-LCD
