@@ -8,4 +8,4 @@ Alientek Warship V3 W T-LCD
 
 Build into binary using Keil µVision, and deploy by running the binary on the test board
 
-Some of the source code may not build correctly if wrong MPU is selected in µVision
+Some of the source code may not build correctly if wrong MCU is selected in µVision
